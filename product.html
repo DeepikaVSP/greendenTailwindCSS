@@ -12,7 +12,7 @@
     <nav class="sticky top-0 z-10 flex items-center justify-between p-3 bg-green-100 shadow-xl">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"
             class="md:hidden"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
             <path fill="#0d0d0d"
                 d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
@@ -30,61 +30,79 @@
             </li>
         </ul>
     </nav>
+
+    <section id="sidenav" class="fixed top-0 right-0 z-20 transition-all duration-1000 bg-green-100"
+        style="height: 100vh; width: 50%; right: -50%;">
+        <div class="p-5 text-right">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col items-center gap-10 text-gray-600 md:flex">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
     <!-- header -->
     <section class="text-center">
         <h1 class="mt-5 text-3xl font-bold">Our Products</h1>
-        <input type="text" class="p-2 m-3 text-gray-500 border border-gray-300" value="Search for a Product"
+        <input id="search" type="text" class="p-2 m-3 text-gray-500 border border-gray-300" placeholder="Search for a Product"
             style="width: 80%;">
     </section>
     <!-- images section -->
     <section class="text-center">
-        <div class="grid grid-cols-2 mt-10 md:grid-cols-4">
+        <div class="grid grid-cols-2 mt-10 md:grid-cols-4" id="container">
             <div>
                 <img src="./images/bestseller_1.jpg" alt="rose"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/bestseller_2.jpg" alt="lily"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Lily Plant</p>
+                <h1>Lily Plant</h1>
                 <p>$30</p>
             </div>
             <div>
                 <img src="./images/bestseller_3.jpg" alt="Hibiscus"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Hibiscus Plant</p>
+                <h1>Hibiscus Plant</h1>
                 <p>$50</p>
             </div>
             <div>
                 <img src="./images/bestseller_3 (1).jpg" alt="aloe"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Sunflower Plant</p>
+                <h1>Sunflower Plant</h1>
                 <p>$70</p>
             </div>
             <div class="mt-5">
                 <img src="./images/bestseller_1.jpg" alt="rose"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
             <div class="mt-5">
                 <img src="./images/bestseller_2.jpg" alt="lily"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Lily Plant</p>
+                <h1>Lily Plant</h1>
                 <p>$30</p>
             </div>
             <div class="mt-5">
                 <img src="./images/bestseller_3.jpg" alt="Hibiscus"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Hibiscus Plant</p>
+                <h1>Hibiscus Plant</h1>
                 <p>$50</p>
             </div>
             <div class="mt-5">
                 <img src="./images/bestseller_3 (1).jpg" alt="aloe"
                     class="inline transform shadow-xl hover: hover:-translate-y-2">
-                <p>Sunflower Plant</p>
+                <h1>Sunflower Plant</h1>
                 <p>$70</p>
             </div>
     </section>
@@ -93,7 +111,9 @@
         <h1 class="text-4xl font-bold ">Greenden</h1>
         <p>The standard chunk of lorem used in the year is reproduced by below interest</p>
         <p>@ 2021 Greenden.com</p>
-      </section>
+    </section>
+    <script src="index.js">
+    </script>
 </body>
 
 </html>
